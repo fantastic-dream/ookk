@@ -1,0 +1,34 @@
+{
+  "name": "ookk",
+  "private": true,
+  "version": "0.0.1",
+  "description": "simple like psi",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ZWkang/ookk"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/fantastic-dream/ookk/issues"
+  },
+  "homepage": "https://github.com/fantastic-dream/ookk",
+  "author": "ZWKang kang95630@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "chalk": "^4.1.0",
+    "humanize-url": "^2.1.0",
+    "lodash": "^4.17.20",
+    "meow": "^7.1.1",
+    "ora": "^5.1.0",
+    "query-string": "^6.13.6",
+    "terminal-link": "^2.1.1",
+    "update-notifier": "^5.0.0"
+  },
+  "bin": {
+    "ookk": "./bin/index.js"
+  }
+}
