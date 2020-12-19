@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const chalk = require('chalk');
-const updateNotifier = require('update-notifier');
-const ookk = require('..');
+'use strict'
+const meow = require('meow')
+const chalk = require('chalk')
+const updateNotifier = require('update-notifier')
+const ookk = require('..')
 
 const cli = meow(`
   Usage
@@ -15,22 +15,24 @@ const cli = meow(`
 
   Example
     $ ookk https://zwkang.com --strategy=mobile
-`);
+`)
 
-updateNotifier({ pkg: cli.pkg }).notify();
+updateNotifier({ pkg: cli.pkg }).notify()
 
 if (!cli.input[0]) {
-    console.error('Specify a URL');
-    process.exit(1);
+  console.error('Specify a URL')
+  process.exit(1)
 }
 
-ookk(cli.input[0], cli.flags).then(() => {
-    process.exit();
-}).catch(error => {
+ookk(cli.input[0], cli.flags)
+  .then(() => {
+    process.exit()
+  })
+  .catch(error => {
     if (error.noStack) {
-        console.error(chalk.red(error.message));
-        process.exit(1);
+      console.error(chalk.red(error.message))
+      process.exit(1)
     } else {
-        throw error;
+      throw error
     }
-});
+  })

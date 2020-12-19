@@ -1,6 +1,5 @@
 {
   "name": "ookk",
-  "private": true,
   "version": "0.0.1",
   "description": "simple like psi",
   "main": "index.js",
